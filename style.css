@@ -1,58 +1,56 @@
-/* Rewritten: Full styling for plain HTML/CSS/JS age verification page */
+/* Angepasst: Alle Selektoren unter .av-widget geschachtelt für Shopify/Pagefly-Kompatibilität */
 
-*,
-*::before,
-*::after {
+.av-widget {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  color: #171717 !important;
+  line-height: 1.5 !important;
+  box-sizing: border-box !important;
+}
+
+.av-widget *, .av-widget *::before, .av-widget *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif;
-  background: linear-gradient(135deg, #f8fafc, #f3e8ff);
-  color: #171717;
-  min-height: 100vh;
-}
-
-.page {
+.av-widget .av-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
-.card {
+.av-widget .av-card {
   width: 100%;
   max-width: 28rem;
-  background: #fff;
+  background: #fff !important;
   border: 1px solid #e2e8f0;
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-h1 {
+.av-widget .av-card h1 {
   text-align: center;
-  font-size: 1.875rem;
-  font-weight: 700;
+  font-size: 1.875rem !important;
+  font-weight: 700 !important;
   letter-spacing: -0.025em;
-  color: #0f172a;
-  margin-bottom: 0.5rem;
+  color: #0f172a !important;
+  margin: 0 0 0.5rem 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
 }
 
-.subtitle {
+.av-widget .av-subtitle {
   text-align: center;
-  font-size: 0.875rem;
-  color: #64748b;
-  margin-bottom: 2rem;
+  font-size: 0.875rem !important;
+  color: #64748b !important;
+  margin: 0 0 2rem 0 !important;
 }
 
 /* --- Slider --- */
 
-.slider-section {
+.av-widget .av-slider-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,33 +58,33 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.slider-labels {
+.av-widget .av-slider-labels {
   display: flex;
   justify-content: space-between;
   width: 100%;
   max-width: 20rem;
   padding: 0 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
 }
 
-.label-no {
+.av-widget .av-label-no {
   color: #cbd5e1;
   transition: color 0.3s;
 }
-.label-no.active {
-  color: #dc2626;
+.av-widget .av-label-no.av-active {
+  color: #dc2626 !important;
 }
 
-.label-yes {
+.av-widget .av-label-yes {
   color: #cbd5e1;
   transition: color 0.3s;
 }
-.label-yes.active {
-  color: #16a34a;
+.av-widget .av-label-yes.av-active {
+  color: #16a34a !important;
 }
 
-.track {
+.av-widget .av-track {
   position: relative;
   width: 100%;
   max-width: 20rem;
@@ -98,104 +96,99 @@ h1 {
   overflow: hidden;
 }
 
-.track-hint {
+.av-widget .av-track-hint {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: #64748b;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  color: #64748b !important;
   pointer-events: none;
   transition: opacity 0.2s;
 }
 
-.track-hint.hidden {
+.av-widget .av-track-hint.av-hidden {
   opacity: 0;
 }
 
-.thumb {
+.av-widget .av-thumb {
   position: absolute;
   top: 6px;
   left: 6px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #fff;
+  background: #fff !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   cursor: grab;
   transition: left 0.3s ease;
   touch-action: none;
 }
 
-.thumb.dragging {
+.av-widget .av-thumb.av-dragging {
   cursor: grabbing;
   transition: none;
 }
 
-.thumb.locked {
+.av-widget .av-thumb.av-locked {
   cursor: default;
-}
-
-/* --- Track confirmed state --- */
-
-.track.confirmed {
-  background: #22c55e;
 }
 
 /* --- Result --- */
 
-.result {
+.av-widget .av-result {
   border-radius: 0.75rem;
   padding: 1.25rem;
   text-align: center;
   transition: background-color 0.3s;
 }
 
-.result.no {
-  background: #fef2f2;
+.av-widget .av-result.av-no {
+  background: #fef2f2 !important;
 }
 
-.result.yes {
-  background: #f0fdf4;
+.av-widget .av-result.av-yes {
+  background: #f0fdf4 !important;
 }
 
-.result-icon {
-  font-size: 1.875rem;
+.av-widget .av-result-icon {
+  font-size: 1.875rem !important;
   margin-bottom: 0.25rem;
 }
 
-.result-title {
-  font-size: 1.125rem;
-  font-weight: 600;
+.av-widget .av-result-title {
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
 }
 
-.result.no .result-title {
-  color: #b91c1c;
+.av-widget .av-result.av-no .av-result-title {
+  color: #b91c1c !important;
 }
-.result.yes .result-title {
-  color: #15803d;
-}
-
-.result-text {
-  margin-top: 0.25rem;
-  font-size: 0.875rem;
+.av-widget .av-result.av-yes .av-result-title {
+  color: #15803d !important;
 }
 
-.result.no .result-text {
-  color: rgba(185, 28, 28, 0.7);
+.av-widget .av-result-text {
+  margin: 0.25rem 0 0 0 !important;
+  font-size: 0.875rem !important;
 }
-.result.yes .result-text {
-  color: rgba(21, 128, 61, 0.7);
+
+.av-widget .av-result.av-no .av-result-text {
+  color: rgba(185, 28, 28, 0.7) !important;
+}
+.av-widget .av-result.av-yes .av-result-text {
+  color: rgba(21, 128, 61, 0.7) !important;
 }
 
 /* --- Modal --- */
 
-.modal-overlay {
+.av-widget .av-modal-overlay {
   position: fixed;
   inset: 0;
-  z-index: 50;
+  z-index: 999999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,62 +197,64 @@ h1 {
   padding: 1rem;
 }
 
-.modal-overlay.hidden {
+.av-widget .av-modal-overlay.av-hidden {
   display: none;
 }
 
-.modal {
+.av-widget .av-modal {
   width: 100%;
   max-width: 24rem;
-  background: #fff;
+  background: #fff !important;
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.modal h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 0.5rem;
+.av-widget .av-modal h2 {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  margin: 0 0 0.5rem 0 !important;
 }
 
-.modal p {
-  font-size: 0.875rem;
-  color: #475569;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
+.av-widget .av-modal p {
+  font-size: 0.875rem !important;
+  color: #475569 !important;
+  margin: 0 0 1.5rem 0 !important;
+  line-height: 1.5 !important;
 }
 
-.modal-buttons {
+.av-widget .av-modal-buttons {
   display: flex;
   gap: 0.75rem;
 }
 
-.btn {
+.av-widget .av-btn {
   flex: 1;
   padding: 0.625rem 1rem;
   border-radius: 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
   cursor: pointer;
   border: none;
   transition: background-color 0.2s;
+  text-transform: none !important;
+  letter-spacing: normal !important;
 }
 
-.btn-cancel {
-  background: #fff;
-  color: #334155;
-  border: 1px solid #e2e8f0;
+.av-widget .av-btn-cancel {
+  background: #fff !important;
+  color: #334155 !important;
+  border: 1px solid #e2e8f0 !important;
 }
-.btn-cancel:hover {
-  background: #f8fafc;
+.av-widget .av-btn-cancel:hover {
+  background: #f8fafc !important;
 }
 
-.btn-confirm {
-  background: #16a34a;
-  color: #fff;
+.av-widget .av-btn-confirm {
+  background: #16a34a !important;
+  color: #fff !important;
 }
-.btn-confirm:hover {
-  background: #15803d;
+.av-widget .av-btn-confirm:hover {
+  background: #15803d !important;
 }

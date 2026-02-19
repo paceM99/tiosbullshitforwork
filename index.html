@@ -1,55 +1,58 @@
-<!-- Rewritten: Replaced Next.js/React with plain HTML/CSS/JS -->
+<!-- Angepasst: Pagefly/Shopify-kompatibles HTML — alle Klassen mit av- Prefix, in .av-widget gewrappt -->
+<!-- Zum Testen lokal: einfach im Browser öffnen. Für Pagefly: den <div class="av-widget">...</div> Block in ein Custom HTML Element einfügen -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Altersverifizierung</title>
-  <meta name="description" content="Bestätigen Sie Ihr Alter, um fortzufahren" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="page">
-    <main class="card">
+
+<div class="av-widget">
+  <div class="av-page">
+    <div class="av-card">
       <h1>Altersverifizierung</h1>
-      <p class="subtitle" id="subtitle">
+      <p class="av-subtitle">
         Schieben Sie den Regler nach rechts, um zu bestätigen, dass Sie 18+ sind
       </p>
 
-      <div class="slider-section">
-        <div class="slider-labels">
-          <span class="label-no active" id="labelNo">Nein</span>
-          <span class="label-yes" id="labelYes">Ja</span>
+      <div class="av-slider-section">
+        <div class="av-slider-labels">
+          <span class="av-label-no av-active">Nein</span>
+          <span class="av-label-yes">Ja</span>
         </div>
 
-        <div class="track" id="track">
-          <span class="track-hint" id="trackHint">Zum Bestätigen schieben →</span>
-          <span class="thumb" id="thumb"></span>
+        <div class="av-track">
+          <span class="av-track-hint">Zum Bestätigen schieben →</span>
+          <span class="av-thumb"></span>
         </div>
       </div>
 
-      <div class="result" id="result">
-        <div class="result-icon">🚫</div>
-        <p class="result-title">Nein — Ich bin unter 18</p>
-        <p class="result-text">Sie müssen mindestens 18 Jahre alt sein, um fortzufahren.</p>
+      <div class="av-result av-no">
+        <div class="av-result-icon">🚫</div>
+        <p class="av-result-title">Nein — Ich bin unter 18</p>
+        <p class="av-result-text">Sie müssen mindestens 18 Jahre alt sein, um fortzufahren.</p>
       </div>
-    </main>
+    </div>
   </div>
 
-  <div class="modal-overlay hidden" id="modalOverlay">
-    <div class="modal">
+  <div class="av-modal-overlay av-hidden">
+    <div class="av-modal">
       <h2>Alter bestätigen</h2>
       <p>
         Mit Ihrer Bestätigung erklären Sie, dass Sie mindestens 18 Jahre alt
         sind. Möchten Sie fortfahren?
       </p>
-      <div class="modal-buttons">
-        <button class="btn btn-cancel" id="btnCancel">Abbrechen</button>
-        <button class="btn btn-confirm" id="btnConfirm">Ja, ich bin 18+</button>
+      <div class="av-modal-buttons">
+        <button class="av-btn av-btn-cancel">Abbrechen</button>
+        <button class="av-btn av-btn-confirm">Ja, ich bin 18+</button>
       </div>
     </div>
   </div>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
