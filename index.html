@@ -1,0 +1,55 @@
+<!-- Rewritten: Replaced Next.js/React with plain HTML/CSS/JS -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Altersverifizierung</title>
+  <meta name="description" content="Bestätigen Sie Ihr Alter, um fortzufahren" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <main class="card">
+      <h1>Altersverifizierung</h1>
+      <p class="subtitle" id="subtitle">
+        Schieben Sie den Regler nach rechts, um zu bestätigen, dass Sie 18+ sind
+      </p>
+
+      <div class="slider-section">
+        <div class="slider-labels">
+          <span class="label-no active" id="labelNo">Nein</span>
+          <span class="label-yes" id="labelYes">Ja</span>
+        </div>
+
+        <div class="track" id="track">
+          <span class="track-hint" id="trackHint">Zum Bestätigen schieben →</span>
+          <span class="thumb" id="thumb"></span>
+        </div>
+      </div>
+
+      <div class="result" id="result">
+        <div class="result-icon">🚫</div>
+        <p class="result-title">Nein — Ich bin unter 18</p>
+        <p class="result-text">Sie müssen mindestens 18 Jahre alt sein, um fortzufahren.</p>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-overlay hidden" id="modalOverlay">
+    <div class="modal">
+      <h2>Alter bestätigen</h2>
+      <p>
+        Mit Ihrer Bestätigung erklären Sie, dass Sie mindestens 18 Jahre alt
+        sind. Möchten Sie fortfahren?
+      </p>
+      <div class="modal-buttons">
+        <button class="btn btn-cancel" id="btnCancel">Abbrechen</button>
+        <button class="btn btn-confirm" id="btnConfirm">Ja, ich bin 18+</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
